@@ -41,11 +41,7 @@ Daily Task''',
             '''This productive tool is designed to help
           you better manage your task
               project-wise conveniently!''',
-            style: TextStyle(
-                fontFamily: "LexendDeca",
-              fontWeight: FontWeight.w400,fontSize: 14,
-              color: Color(0XFFbac24252C)
-            ),
+            style: Theme.of(context).textTheme.bodyMedium
       ),
           SizedBox(height: 50,),
           MaterialButton(

@@ -40,7 +40,7 @@ Image.asset(AppImages.ImageLogin),
                   showModalBottomSheet(context: context,
                       builder:  (context) {
                         return Padding(
-                          padding: const EdgeInsets.all(30.0),
+                          padding: const EdgeInsets.all(40.0),
                           child: Row(
                            children: [
                              GestureDetector(
@@ -59,6 +59,7 @@ Image.asset(AppImages.ImageLogin),
                                  ),
                                ),
                              ) ,
+                             Spacer(),
                              GestureDetector(
                                onTap: (){
                                  PickPhoto(ImageSource.camera) ;

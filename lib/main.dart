@@ -27,7 +27,7 @@ class Todo extends StatelessWidget{
 
   Widget build(BuildContext context) {
     Provider.of<ThemeProvider>(context,listen: false).setswitchValueFromHive();
-    Provider.of<HomeProvider>(context,listen: false).fetchNotesFromBox();
+    Provider.of<HomeProvider>(context,listen: false).fetchNotesFromHive();
     // TODO: implement build
     return MaterialApp(
       theme: AppTheme().LightThemeMode,

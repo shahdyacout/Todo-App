@@ -59,11 +59,14 @@ class HomeProvider extends ChangeNotifier{
   }
   updateArchived(int index){
     notes[index].archieveOrNot=!notes[index].archieveOrNot;
+    //Hive.box<NoteModel>(MyHive.notesBox).putAt(index, notes[index]);
     notifyListeners();
   }
   updateDone(int index){
     notes[index].doneOrNot=!notes[index].doneOrNot;
     notifyListeners();
+    Hive.box<NoteModel>(MyHive.notesBox).putAt(index, notes[index]);
+
   }
   DateTime ?startDate;
   DateTime ?endDate;

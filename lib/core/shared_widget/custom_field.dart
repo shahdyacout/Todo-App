@@ -2,21 +2,26 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:todo/core/shared_widget/custom_field.dart';
 
+import '../app_color.dart';
+
 class CustomTextField extends StatelessWidget {
   CustomTextField({required this.name,this.hinitText,this.minline=1,this.maxline=3,
-  required this.controller});
+  this.controller,this.CustomColor=AppColor.LightPrimaryColor});
   String ?hinitText;
   String name;
   int minline;
   int maxline;
-  TextEditingController controller;
+  Color CustomColor;
+  TextEditingController ?controller=TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color:Colors.white,
-        borderRadius: BorderRadius.circular(15)
+color: CustomColor,
+
+          borderRadius: BorderRadius.circular(15)
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

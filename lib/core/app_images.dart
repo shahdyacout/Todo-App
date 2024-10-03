@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+
 
 class AppImages {
   static const String Onboarding="assets/images/onboarding.png";
@@ -9,8 +9,8 @@ class AppImages {
   static const String watch="assets/images/fluent-emoji-flat_watch.png";
   static const String arrowDown="assets/images/Arrow - Down 3.png";
   static const String arrowBackBlack="assets/images/Arrow - Left.-Black.png";
-  static const String archieve="assets/images/archive.png";
   static const String delete="assets/images/delete.png";
 static const String ArchivedDrawer="assets/images/drawer_archived.png";
 static const String DoneTask="assets/images/done.png";
+static const String Archived="assets/images/archived.png";
 }

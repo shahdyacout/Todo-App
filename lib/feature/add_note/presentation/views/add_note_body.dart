@@ -32,63 +32,93 @@ class _AddNoteBodyState extends State<AddNoteBody> {
         CustomTextField(name: "Description",maxline: 6,minline: 3,
           hinitText:"Enter a Description",controller:desController ,),
         SizedBox(height: 16,),
-        ListTile(
-          tileColor: Colors.white,
-          leading: Image.asset(AppImages.calender),
-    trailing: GestureDetector(child:
-    Image.asset(AppImages.arrowDown),
-    onTap: ()async{
-
-    Provider.of<HomeProvider>(context,listen: false).selectStartDate(context);
-
-    },
+        Container(
+    decoration: BoxDecoration(
+    gradient: LinearGradient(
+    colors: [Color(0xff90B6E2), Color(0xffCDACD3)], // ألوان التدرج
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
     ),
-          title: Text("Start Date"),
-          subtitle: Text(
-            Provider.of<HomeProvider>(context).startDate==null?
-            "Enter The Start Date":Provider.of<HomeProvider>(context,listen: false)
-              .convertDate(Provider.of<HomeProvider>(context).startDate!),
-            style: TextStyle(
-              color: Colors.grey
-            ),
-          ),
+    ),
 
+    child: ListTile(
+            tileColor: Colors.white,
+            leading: Image.asset(AppImages.calender),
+              trailing: GestureDetector(child:
+              Image.asset(AppImages.arrowDown),
+              onTap: ()async{
+
+              Provider.of<HomeProvider>(context,listen: false).selectStartDate(context);
+
+              },
+              ),
+            title: Text("Start Date"),
+            subtitle: Text(
+              Provider.of<HomeProvider>(context).startDate==null?
+              "Enter The Start Date":Provider.of<HomeProvider>(context,listen: false)
+                .convertDate(Provider.of<HomeProvider>(context).startDate!),
+              style: TextStyle(
+                color: Colors.grey
+              ),
+            ),
+
+          ),
         ),
         SizedBox(height: 16,),
-        ListTile(
-          tileColor: Colors.white,
-          leading: Image.asset(AppImages.calender),
-          trailing: GestureDetector(child:
-          Image.asset(AppImages.arrowDown),
-            onTap: ()async{
-Provider.of<HomeProvider>(context,listen: false).selectEndDate(context);
-            },
-          ),
-          title: Text("End Date"),
-          subtitle: Text(
-    Provider.of<HomeProvider>(context).endDate==null?
-    "Enter The End Date":Provider.of<HomeProvider>(context,listen: false)
-        .convertDate(Provider.of<HomeProvider>(context).endDate!),
-            style: TextStyle(
-                color: Colors.grey
+        Container(
+    decoration: BoxDecoration(
+    gradient: LinearGradient(
+    colors: [Color(0xff90B6E2), Color(0xffCDACD3)], // ألوان التدرج
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    ),
+    ),
+
+    child: ListTile(
+            tileColor: Colors.white,
+            leading: Image.asset(AppImages.calender),
+            trailing: GestureDetector(child:
+            Image.asset(AppImages.arrowDown),
+              onTap: ()async{
+          Provider.of<HomeProvider>(context,listen: false).selectEndDate(context);
+              },
+            ),
+            title: Text("End Date"),
+            subtitle: Text(
+              Provider.of<HomeProvider>(context).endDate==null?
+              "Enter The End Date":Provider.of<HomeProvider>(context,listen: false)
+          .convertDate(Provider.of<HomeProvider>(context).endDate!),
+              style: TextStyle(
+                  color: Colors.grey
+              ),
             ),
           ),
         ),
         SizedBox(height: 16,),
-        ListTile(
-          tileColor: Colors.white,
-          leading: Image.asset(AppImages.watch),
-          trailing: GestureDetector(child:
-          Image.asset(AppImages.arrowDown),
-            onTap: ()async{
-            Provider.of<HomeProvider>(context,listen: false).selectTime(context);
-            },
-          ),
-          title: Text("Add Time"),
-          subtitle: Text(Provider.of<HomeProvider>(context).time==null?
-            "Enter Time":Provider.of<HomeProvider>(context,listen: false).convertTime(Provider.of<HomeProvider>(context).time!),
-            style: TextStyle(
-                color: Colors.grey
+        Container(
+    decoration: BoxDecoration(
+    gradient: LinearGradient(
+    colors: [Color(0xff90B6E2), Color(0xffCDACD3)], // ألوان التدرج
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    ),
+    ),
+
+    child: ListTile(
+            tileColor: Colors.white,
+            leading: Image.asset(AppImages.watch),
+            trailing: GestureDetector(child:
+            Image.asset(AppImages.arrowDown),
+              onTap: ()async{
+              Provider.of<HomeProvider>(context,listen: false).selectTime(context);
+              },
+            ),
+            title: Text("Add Time"),
+            subtitle: Text(Provider.of<HomeProvider>(context).time==null?
+              "Enter Time":Provider.of<HomeProvider>(context,listen: false).convertTime(Provider.of<HomeProvider>(context).time!),
+              style: TextStyle(
+                  color: Colors.grey
+              ),
             ),
           ),
         ),
